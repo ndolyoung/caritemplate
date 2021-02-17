@@ -1,0 +1,13 @@
+<div id='dulmyid-thumbnail'>
+<img class='dulmyid-image' expr:alt='data:post.title' expr:src='resizeImage(data:post.thumbnailUrl,600)' expr:title='data:post.title'/>
+<div class='dulmyid-card-author vcard'>
+<b:if cond='data:top.showAuthor'>
+<b:if cond='data:post.authorProfileUrl'>
+<div class='fn' itemprop='author' itemscope='itemscope' itemtype='https://schema.org/Person'>
+<img class='photo-wrap' expr:src='resizeImage(data:post.authorPhoto.url,100)' itemprop='image'/>
+Oleh <a href='https://dul.my.id' itemprop='url' rel='dofollow' title='author profile'>
+  <span itemprop='name'><data:post.author/></span></a>
+  </div><b:else/><span class='fn' itemprop='name'><data:post.author/></span></b:if></b:if></div>
+<div class='card-time'>
+<abbr class='published updated timeago' expr:title='data:post.timestampISO8601' itemprop='datePublished dateModified'><data:post.dateHeader/></abbr>
+</div>
